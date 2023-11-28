@@ -17,11 +17,15 @@ public class EnemyMovemant : MonoBehaviour
         if ( GameObject.FindGameObjectWithTag(targetTag) ){
             target = GameObject.FindGameObjectWithTag(targetTag).transform;
         }
-        
     }
 
     void Update() {
-        // Vector3 directionOfMovement = Vector3.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
+        if( target != null)
+            MoveToTarget();
+    }
+
+
+    private void MoveToTarget(){
         Vector3 directionOfMovement = target.position - transform.position;
         directionOfMovement.Normalize();
         
