@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb7804fdf9af89f49be1f333291c6eec, type: 3}
-  m_Name: Enemy Spawn Time
+  m_Name: Enemy Spawn Timer
   m_EditorClassIdentifier: 
-  initialValue: 5
-  runtimeValue: 5
+  initialValue: 0
+  runtimeValue: 0
