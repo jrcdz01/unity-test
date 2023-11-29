@@ -10,7 +10,7 @@ public class HealthManager : MonoBehaviour
     [SerializeField] protected Animator animator;
     [SerializeField] protected int currentHealth;
    
-   void Start(){
+   void Awake(){
         currentHealth = initHealth;
         RestartAparence();
    }

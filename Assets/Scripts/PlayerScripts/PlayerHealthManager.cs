@@ -23,7 +23,7 @@ public class PlayerHealthManager : HealthManager
 
     private void UpdateAnimationHealth(){
         float healthPercentage = currentHealth/initHealth;
-        if( healthPercentage >= .5f){
+        if( healthPercentage >= .5f && healthPercentage < 1){
             animator.SetBool("Half Health", true);
             animator.SetBool("Full Health", false);
         }else if( healthPercentage < .5f ){
