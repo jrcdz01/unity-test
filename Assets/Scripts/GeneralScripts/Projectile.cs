@@ -11,6 +11,7 @@ public class Projectile : MonoBehaviour
     protected string targetTag;
     [SerializeField] private Animator animator;
     [SerializeField] private float lifeTime;
+    [SerializeField] private AudioSource hitSoundEffect;
     private int damagePower = 1;
 
     void Update(){
@@ -44,6 +45,7 @@ public class Projectile : MonoBehaviour
     IEnumerator clashCo(){
         animator.SetBool("Collider", true);
         projectileRigidBody.velocity *= speed/desaceleracion;
+        hitSoundEffect.Play();
         yield return null;
         yield return new WaitForSeconds(.30f);
         Destroy(this.gameObject);
