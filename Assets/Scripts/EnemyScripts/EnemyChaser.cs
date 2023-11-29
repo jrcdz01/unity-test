@@ -6,7 +6,7 @@ using UnityEngine;
 public class EnemyChaser : Enemy
 {
 
-    [SerializeField] int damagePower;
+    [SerializeField] private int damagePower;
     // Start is called before the first frame update
     void Start()
     {

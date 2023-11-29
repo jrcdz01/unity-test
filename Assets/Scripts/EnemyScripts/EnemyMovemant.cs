@@ -12,18 +12,16 @@ public class EnemyMovemant : MonoBehaviour
     [SerializeField] string targetTag;
     private Transform target;
     
-    
-    void Start(){
+    void Awake(){
         if ( GameObject.FindGameObjectWithTag(targetTag) ){
             target = GameObject.FindGameObjectWithTag(targetTag).transform;
         }
     }
 
-    void Update() {
+    void FixedUpdate() {
         if( target != null)
             MoveToTarget();
     }
-
 
     private void MoveToTarget(){
         Vector3 directionOfMovement = target.position - transform.position;
@@ -35,5 +33,9 @@ public class EnemyMovemant : MonoBehaviour
         directionOfMovement = Vector3.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
 
         myRigidbody.MovePosition(directionOfMovement);
+    }
+
+    public Transform GetTarget(){
+        return target;
     }
 }
