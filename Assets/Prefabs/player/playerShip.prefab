@@ -456,7 +456,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4450909235012427640}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -489,7 +489,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentState: 0
   moveSpeed: 5
-  rotationSpeed: 36
+  rotationSpeed: 30
   playerRigidBody: {fileID: 8207793324466007043}
 --- !u!95 &5136010993850995798
 Animator:
@@ -547,7 +547,7 @@ MonoBehaviour:
   initHealth: 3
   textLife: {fileID: 5268097646184034778}
   animator: {fileID: 5136010993850995798}
-  currentHealth: 0
+  currentHealth: 3
   gameOverPanel: {fileID: 0}
   textScore: {fileID: 0}
   playerScore: {fileID: 11400000, guid: 9e6b05e3825e43b41b57493ef1b26c6d, type: 2}

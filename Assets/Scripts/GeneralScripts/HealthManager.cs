@@ -12,6 +12,7 @@ public class HealthManager : MonoBehaviour
    
    void Start(){
         currentHealth = initHealth;
+        RestartAparence();
    }
     void Update(){
         textLife.text = currentHealth.ToString();
@@ -30,5 +31,11 @@ public class HealthManager : MonoBehaviour
         if(currentHealth <= 0 ){
             Death();
         }
+    }
+
+    private void RestartAparence(){
+        animator.SetBool("Full Health", true);
+        animator.SetBool("Half Health", false);
+        animator.SetBool("Low Health", false);
     }
 }

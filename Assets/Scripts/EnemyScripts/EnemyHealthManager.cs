@@ -26,4 +26,5 @@ public class EnemyHealthManager : HealthManager
             animator.SetBool("Low Health", true);
         }
     }
+
 }
