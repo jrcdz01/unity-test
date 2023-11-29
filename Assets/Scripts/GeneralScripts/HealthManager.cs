@@ -1,14 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
+using Unity.VisualScripting;
 public class HealthManager : MonoBehaviour
 {
-    [SerializeField] private int initHealth;
-    private int currentHealth;
+    [SerializeField] protected int initHealth;
+    [SerializeField] private TMP_Text textLife;
+    protected int currentHealth;
    
+   void Start(){
+        currentHealth = initHealth;
+   }
+    void Update(){
+        textLife.text = currentHealth.ToString();
+    }
 
-    public void Death(){
+    protected virtual void Death(){
         if( currentHealth <= 0 ){
             Destroy(gameObject);
         }
