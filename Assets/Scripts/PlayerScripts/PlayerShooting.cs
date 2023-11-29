@@ -18,19 +18,19 @@ public class PlayerShooting : Shoot
 
     void Update()
     {
-        if(Input.GetButtonDown("Fire1")  ){
+        if(Input.GetButtonDown("Fire1")  && timer.CheckEndCooldown()){
             cannonSelected = pivotFrontCannon.transform.position;
             cannonRotation = transform.rotation;
             SingleShoot(cannonSelected, cannonRotation);
         }
 
-        if(Input.GetButtonDown("Fire2")){
+        if(Input.GetButtonDown("Fire2") && timer.CheckEndCooldown()){
             cannonSelected = pivotLeftCannon.transform.position;
             cannonRotation = transform.rotation*Quaternion.Euler(0,0,90).normalized;
             SideTripleShoot(cannonSelected, cannonRotation);
         }
 
-        if(Input.GetButtonDown("Fire3")){
+        if(Input.GetButtonDown("Fire3") && timer.CheckEndCooldown()){
             cannonSelected = pivotRightCannon.transform.position;
             cannonRotation = transform.rotation*Quaternion.Euler(0,0,-90).normalized;
             SideTripleShoot(cannonSelected, cannonRotation);

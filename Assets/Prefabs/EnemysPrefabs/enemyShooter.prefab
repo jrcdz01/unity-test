@@ -93,6 +93,7 @@ GameObject:
   - component: {fileID: 8886221821341464785}
   - component: {fileID: 3513238133870283683}
   - component: {fileID: 9161860653061154573}
+  - component: {fileID: 123308812822436840}
   m_Layer: 0
   m_Name: enemyShooter
   m_TagString: Enemy
@@ -274,8 +275,23 @@ MonoBehaviour:
   projectile: {fileID: 2436373437203141174, guid: 583e2bba4e610a94a98e4c52c5daa58e, type: 3}
   targetTag: Player
   damagePower: 1
-  cooldownTime: 10
+  cooldownTime: 1.5
+  timer: {fileID: 123308812822436840}
   pivotCannon: {fileID: 5671726431678525545}
+--- !u!114 &123308812822436840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2025725040649674467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec44966f33102224c85d194046aa14fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeLeft: 0
+  startTimer: 0
 --- !u!1 &3504462844969784881
 GameObject:
   m_ObjectHideFlags: 0
@@ -712,7 +728,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 3a753ea3bc654e24bb69cee3ebae7842, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

@@ -281,6 +281,7 @@ GameObject:
   - component: {fileID: 5136010993850995798}
   - component: {fileID: 3428887587413653327}
   - component: {fileID: 3835065234809445597}
+  - component: {fileID: 5316179101879969427}
   m_Layer: 6
   m_Name: playerShip
   m_TagString: Player
@@ -526,7 +527,8 @@ MonoBehaviour:
   projectile: {fileID: 2436373437203141174, guid: 583e2bba4e610a94a98e4c52c5daa58e, type: 3}
   targetTag: Enemy
   damagePower: 1
-  cooldownTime: 3
+  cooldownTime: 1
+  timer: {fileID: 5316179101879969427}
   pivotFrontCannon: {fileID: 1083281570866867338}
   pivotRightCannon: {fileID: 2089294794161801276}
   pivotLeftCannon: {fileID: 1765627032907407496}
@@ -547,6 +549,20 @@ MonoBehaviour:
   gameOverPanel: {fileID: 0}
   textScore: {fileID: 0}
   playerScore: {fileID: 11400000, guid: 9e6b05e3825e43b41b57493ef1b26c6d, type: 2}
+--- !u!114 &5316179101879969427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4450909235012427640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec44966f33102224c85d194046aa14fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeLeft: 0
+  startTimer: 0
 --- !u!1 &7243255117882466604
 GameObject:
   m_ObjectHideFlags: 0

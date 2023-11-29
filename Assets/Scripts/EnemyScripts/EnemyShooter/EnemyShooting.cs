@@ -6,7 +6,10 @@ public class EnemyShooting : Shoot
 {
     [SerializeField] GameObject pivotCannon;
 
-    public void ShootAttack(){       
+    public void ShootAttack(){
+        if ( !timer.CheckEndCooldown())
+            return;
+
         Vector2 cannonSelected = pivotCannon.transform.position;
         Quaternion cannonRotation = transform.rotation * Quaternion.Euler(0, 0, -180);
         
