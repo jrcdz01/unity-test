@@ -17,6 +17,7 @@ public class MainMenu : MonoBehaviour
     public void BackToMainMenu(){
         optionsPanel.SetActive(false);
     }
+
     public void QuitToDesktop(){
         Application.Quit();
     }
