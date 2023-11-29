@@ -1,34 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 
 public class Timer : MonoBehaviour
 {
-    [SerializeField] private float initialValue;
-    private float runtimeValue;
-    [SerializeField] private bool startTimer = false;
+    protected float timeLeft;
+    [SerializeField] protected bool startTimer = false;
    
-    void Start()
+    void FixedUpdate()
     {
-       runtimeValue = initialValue; 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if( runtimeValue > 0 && startTimer)
+        if( timeLeft > 0 && startTimer){
             DecreaseTime();
+        }
     }
 
     public void DecreaseTime(){
-        runtimeValue -= Time.deltaTime;
+        Debug.Log("Restam "+timeLeft+"s");
+        timeLeft -= Time.deltaTime;
     }
 
-    public void Setup( float amountTime ){
-        initialValue = amountTime;
-    }
-
-    public void StartTimer(){
+    public void StartTimer(float time){
+        timeLeft = time;
         startTimer = true;
     }
 }

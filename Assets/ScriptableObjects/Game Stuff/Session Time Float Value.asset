@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb7804fdf9af89f49be1f333291c6eec, type: 3}
   m_Name: Session Time Float Value
   m_EditorClassIdentifier: 
-  initialValue: 60
-  runtimeValue: 60
+  initialValue: 30
+  runtimeValue: 30
