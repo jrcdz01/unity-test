@@ -40,7 +40,8 @@ public class PlayerMovement : MonoBehaviour
     void MoveForward(){
         Vector3 velocity = new(0, Input.GetAxisRaw("Vertical")*moveSpeed*Time.deltaTime, 0);
         
-        transform.position += rotationAngle*velocity;
+        // transform.position += rotationAngle*velocity;
+        playerRigidBody.MovePosition( transform.position+(rotationAngle*velocity));
     }
 
     void Rotation(){

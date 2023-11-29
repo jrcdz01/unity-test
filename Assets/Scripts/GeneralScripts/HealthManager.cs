@@ -7,7 +7,8 @@ public class HealthManager : MonoBehaviour
 {
     [SerializeField] protected int initHealth;
     [SerializeField] private TMP_Text textLife;
-    protected int currentHealth;
+    [SerializeField] protected Animator animator;
+    [SerializeField] protected int currentHealth;
    
    void Start(){
         currentHealth = initHealth;
@@ -23,9 +24,9 @@ public class HealthManager : MonoBehaviour
     }
 
     public void GetHit( int damage ){
-        Debug.Log("Dano recebido "+damage);
+        // Debug.Log("Dano recebido "+damage);
         currentHealth -= damage;
-        Debug.Log("Vida restante "+currentHealth);
+        // Debug.Log("Vida restante "+currentHealth);
         if(currentHealth <= 0 ){
             Death();
         }

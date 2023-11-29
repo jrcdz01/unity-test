@@ -88,7 +88,6 @@ GameObject:
   - component: {fileID: 2910983081490945761}
   - component: {fileID: 7408735593123658513}
   - component: {fileID: 1210743725571594323}
-  - component: {fileID: 8101336741140110354}
   - component: {fileID: 886896335448644398}
   - component: {fileID: 8886221821341464785}
   - component: {fileID: 3513238133870283683}
@@ -158,7 +157,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.03125, y: 1.765625}
-    newSize: {x: 0.66, y: 1.13}
+    newSize: {x: 1.03125, y: 1.765625}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -193,27 +192,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!95 &8101336741140110354
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2025725040649674467}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 065060e6e93a3e94f8e78f8e7507a6e8, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &886896335448644398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -243,6 +221,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   initHealth: 3
   textLife: {fileID: 4832691795459903435}
+  animator: {fileID: 8954605568356267230}
+  currentHealth: 0
   playerPoints: {fileID: 11400000, guid: 9e6b05e3825e43b41b57493ef1b26c6d, type: 2}
 --- !u!114 &3513238133870283683
 MonoBehaviour:
@@ -257,7 +237,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHealth: 3
-  animator: {fileID: 8101336741140110354}
+  animator: {fileID: 0}
   deathEffectDelay: 0.6
   attackRadius: 5
 --- !u!114 &9161860653061154573
@@ -666,6 +646,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6646754987684959781}
   - component: {fileID: 7763112878599876316}
+  - component: {fileID: 8954605568356267230}
   m_Layer: 0
   m_Name: gaphic
   m_TagString: Untagged
@@ -728,7 +709,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 3a753ea3bc654e24bb69cee3ebae7842, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -740,3 +721,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &8954605568356267230
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7872013249948860085}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 065060e6e93a3e94f8e78f8e7507a6e8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

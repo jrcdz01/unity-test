@@ -17,7 +17,7 @@ public class Timer : MonoBehaviour
     }
 
     public void DecreaseTime(){
-        Debug.Log("Restam "+timeLeft+"s");
+        // Debug.Log("Restam "+timeLeft+"s");
         timeLeft -= Time.deltaTime;
     }
 

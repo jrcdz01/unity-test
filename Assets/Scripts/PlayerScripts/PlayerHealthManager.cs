@@ -16,4 +16,19 @@ public class PlayerHealthManager : HealthManager
 
         }
     }
+
+    void FixedUpdate(){
+        UpdateAnimationHealth();
+    }
+
+    private void UpdateAnimationHealth(){
+        float healthPercentage = currentHealth/initHealth;
+        if( healthPercentage >= .5f){
+            animator.SetBool("Half Health", true);
+            animator.SetBool("Full Health", false);
+        }else if( healthPercentage < .5f ){
+            animator.SetBool("Half Health", false);
+            animator.SetBool("Low Health", true);
+        }
+    }
 }

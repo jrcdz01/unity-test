@@ -8,6 +8,7 @@ public class SessionTimer : Timer
     [SerializeField] private FloatValue timerSelected;
     [SerializeField] private GameObject gameOverPanel;
     [SerializeField] private TMP_Text textScore;
+    [SerializeField] private TMP_Text textLeftTimeUI;
     [SerializeField] private IntValue playerScore;
     // Start is called before the first frame update
     void Awake(){
@@ -21,6 +22,7 @@ public class SessionTimer : Timer
     void Update(){
         if( timeLeft > 0 && startTimer){
             DecreaseTime();
+            letfTimeUpdateUI();
         }else if( timeLeft <= 0){
            gameOver();
         }
@@ -30,5 +32,9 @@ public class SessionTimer : Timer
         Time.timeScale = 0f;
         textScore.text = playerScore.runtimeValue.ToString();
         gameOverPanel.SetActive(true);
+    }
+
+    private void letfTimeUpdateUI(){
+        textLeftTimeUI.text = ((int)timeLeft).ToString();
     }
 }
